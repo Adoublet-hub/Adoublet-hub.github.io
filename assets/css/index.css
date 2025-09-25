@@ -1,0 +1,71 @@
+/* ----- Section principale ----- */
+.main-section {
+  padding: 2rem;
+}
+
+/* ----- Conteneur global ----- */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ----- Layout flexible : sidebar + contenu ----- */
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* ----- Section projets ----- */
+.projects-section {
+  flex: 3;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d63384;
+  margin-bottom: 1.5rem;
+}
+
+/* ----- Grille de projets ----- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+/* ----- Carte projet ----- */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.project-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+}
+
+.project-card .overlay h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.project-card .overlay p {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+}
+

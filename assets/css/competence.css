@@ -1,0 +1,159 @@
+/* Conteneur Profil + Langages */
+.layout-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* passe en colonne sur mobile */
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  position: relative; /* nécessaire pour le fond animé */
+  border-radius: 1.5rem;
+  overflow: hidden; /* arrondi appliqué aussi au fond animé */
+}
+
+/* Fond animé derrière Profil + Langages */
+.layout-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: 300% 300%;
+  animation: gradientMove 15s ease infinite;
+  z-index: 0;
+}
+
+/* Met le contenu au-dessus du fond */
+.layout-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Bloc Profil */
+.profile-section {
+  flex: 1;
+  min-width: 280px;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 6px 16px rgba(255, 160, 190, 0.25);
+}
+
+/* Bloc Langages */
+#languages {
+  flex: 2;
+  min-width: 300px;
+  background: rgba(255, 209, 230, 0.65);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 6px 16px rgba(255, 160, 190, 0.25);
+}
+
+/* Section Langages (ton CSS original) */
+#languages h3 {
+  font-size: 2rem;
+  color: #b8336a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#languagesList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.language {
+  background: #fff;
+  border-radius: 1rem;
+  width: 9rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.language:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.2);
+}
+
+.language img {
+  width: auto;      /* garde la largeur originale */
+  height: 50px;     /* limite juste la hauteur */
+  max-width: 100%;  /* évite de dépasser le bloc */
+  margin-bottom: 0.8rem;
+}
+
+
+.language h4 {
+  font-size: 1rem;
+  color: #e91e63;
+  font-weight: 600;
+}
+
+/* Section Compétences - toujours en dessous */
+#skills {
+  width: 100%;           /* prend toute la largeur */
+  max-width: none;       /* supprime toute limite de largeur */
+  margin-top: 3rem;
+  padding: 3rem 1.5rem;
+  background: linear-gradient(to bottom right, #fff0f5, #ffeaf0);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 1.5rem;
+}
+
+
+#skills h3 {
+  font-size: 2.3rem;
+  color: #b8336a;
+  margin-bottom: 2rem;
+}
+
+#skillsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #ffd6e8;
+  box-shadow: 0 6px 18px rgba(255, 174, 208, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.skill:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(255, 135, 179, 0.25);
+}
+
+.skill i {
+  font-size: 2.8rem;
+  color: #e91e63;
+  margin-bottom: 1rem;
+}
+
+.skill h4 {
+  font-size: 1.2rem;
+  color: #b8336a;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.skill p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Animation du dégradé */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

@@ -1,0 +1,113 @@
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.profile-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Pour que la section profil soit plus compacte */
+.profile-section {
+  max-width: 350px;
+}
+
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  margin: 2rem;
+  background: linear-gradient(to right, #ffe4f0, #fff0f7);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 25px rgba(255, 174, 208, 0.2);
+  gap: 2rem;
+}
+
+#about {
+  flex: 2;
+  min-width: 300px;
+}
+
+#about h3 {
+  font-size: 2.5rem;
+  color: #c43b77;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+#aboutText h4 {
+  font-size: 1.5rem;
+  color: #e91e63;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#aboutText p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.2);
+}
+
+/* Soft Skills */
+#aboutText h5 {
+  font-size: 1.2rem;
+  color: #d63384;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.soft-skills {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+}
+
+.soft-skills li {
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.soft-skills li:hover {
+  background-color: #ffe5f0;
+}
+
+.soft-skills li i {
+  color: #e91e63;
+  font-size: 1.2rem;
+}
